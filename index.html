@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script src="ap.js"></script>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css' />
+	<link rel="icon" href="" />
+	<title>Pos-med</title>
+</head>
+
+<body ng-controller="TodoListController">
+	<header class="cabecalho container"> <a href="index.html">
+		
+	</a>
+	<nav class="n" ng-repeat="body in bodys">
+		<img class="logo" src="logo.png"/>
+			<p class="nome">{{body.nome}}</p>
+            <p class="email">{{body.email}}</p>
+            <p class="consulta">Consulta: {{body.consulta}}</p>
+			<p class="medico">Médico: {{body.medico}}<p>
+			<p class="metas">Metas contra {{body.doenca}}</p>
+	</nav> </header>
+
+   <!-------------MAIN---------------->
+   
+    <main class="servicos" ng-repeat="body in bodys">
+       <article class="servico">
+		<div class="inner">
+            <header class="titulo">Como você está se sentindo hoje?</header>
+			<a href="#bom"><img class="img" src="logo1.png" alt="logo"></a>
+			<a href="#menos"><img class="img" src="logo1.png" alt="logo"></a>
+			<a href="#mais"><img class="img" src="logo1.png" alt="logo"><a>
+        </div>
+       </article>
+    </main>
+	
+
+<div ng-view></div> 
+  
+<body>
+</html>
